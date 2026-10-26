@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="color-scheme" content="light">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Rediger BARE ORD</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f5f1e7;color:#171713;font:16px/1.6 Arial,sans-serif}main{max-width:840px;margin:0 auto;padding:40px 24px}a{color:inherit;text-underline-offset:4px}header{border-bottom:1px solid #171713;padding-bottom:20px;display:flex;justify-content:space-between;gap:20px}h1{font:54px/1.05 Georgia,serif;margin:35px 0 18px;letter-spacing:-2px}h2{font:28px/1.2 Georgia,serif;margin-top:35px}p{max-width:650px}.box{background:#ffc300;padding:24px;margin:25px 0}label{display:block;font-size:14px;font-weight:bold;margin:15px 0 6px}input,select{color:#171713;-webkit-text-fill-color:#171713;color-scheme:light;font:16px Arial,sans-serif;width:100%;padding:13px;background:#fffdf7;border:1px solid #171713;border-radius:0}button,.button{display:inline-block;background:#171713;color:#ffc300;border:1px solid #171713;padding:13px 18px;font:bold 14px/1.4 Arial,sans-serif;cursor:pointer;text-decoration:none}.secondary{background:transparent;color:#171713}button:hover,.button:hover{background:#fffdf7;color:#171713}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #171713;outline-offset:3px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.help{font-size:13px}.row{padding:18px 0;border-top:1px solid #c8c4b8;display:flex;gap:15px;justify-content:space-between;align-items:center}.row span{display:block;font-size:13px}.row button{font-size:12px;padding:8px 12px}.row .actions{margin:0;flex-shrink:0}.date{font-weight:bold}#status{min-height:1.6em;font-weight:bold}#dirty{font-size:13px}input[type=file]{display:none}[hidden]{display:none!important}.check{display:flex;align-items:center;gap:10px;font-weight:400}.check input{width:auto}.filename{font-family:monospace}@media(max-width:550px){h1{font-size:42px}.row{align-items:flex-start;flex-direction:column}.box{padding:18px}main{padding:25px 18px}}
+select option{color:#171713;background-color:#fffdf7;-webkit-text-fill-color:#171713}select option:checked{color:#171713;background-color:#ffc300}
+</style>
+</head>
+<body><main>
+<noscript><p>JavaScript skal være slået til for at redigere og gemme begivenheder.</p></noscript>
+<header><strong>SOLSTORM / BARE ORD</strong><a href="index.html" target="_blank" rel="noopener">Se siden ↗</a></header>
+<h1>Næste aften.<br>Ét link. Færdig.</h1>
+<p>Datoerne kører automatisk hver anden tirsdag. Her tilføjer du Facebook-eventet til den rigtige aften — eller markerer en pause.</p>
+<div class="actions"><button class="secondary" id="open" type="button">Åbn eksisterende datafil</button></div>
+<input id="file" type="file" accept=".js,application/javascript,text/javascript">
+<form id="editor" class="box">
+<label for="date">Hvilken aften?</label><select id="date" required><option value="2026-10-27">Tirsdag 27. oktober 2026</option><option value="2026-11-10">Tirsdag 10. november 2026</option><option value="2026-11-24">Tirsdag 24. november 2026</option><option value="2026-12-08">Tirsdag 8. december 2026</option><option value="2026-12-22">Tirsdag 22. december 2026</option><option value="2027-01-05">Tirsdag 5. januar 2027</option><option value="2027-01-19">Tirsdag 19. januar 2027</option><option value="2027-02-02">Tirsdag 2. februar 2027</option><option value="2027-02-16">Tirsdag 16. februar 2027</option><option value="2027-03-02">Tirsdag 2. marts 2027</option><option value="2027-03-16">Tirsdag 16. marts 2027</option><option value="2027-03-30">Tirsdag 30. marts 2027</option><option value="2027-04-13">Tirsdag 13. april 2027</option><option value="2027-04-27">Tirsdag 27. april 2027</option><option value="2027-05-11">Tirsdag 11. maj 2027</option><option value="2027-05-25">Tirsdag 25. maj 2027</option><option value="2027-06-08">Tirsdag 8. juni 2027</option><option value="2027-06-22">Tirsdag 22. juni 2027</option><option value="2027-07-06">Tirsdag 6. juli 2027</option><option value="2027-07-20">Tirsdag 20. juli 2027</option><option value="2027-08-03">Tirsdag 3. august 2027</option><option value="2027-08-17">Tirsdag 17. august 2027</option><option value="2027-08-31">Tirsdag 31. august 2027</option><option value="2027-09-14">Tirsdag 14. september 2027</option><option value="2027-09-28">Tirsdag 28. september 2027</option><option value="2027-10-12">Tirsdag 12. oktober 2027</option><option value="2027-10-26">Tirsdag 26. oktober 2027</option><option value="2027-11-09">Tirsdag 9. november 2027</option><option value="2027-11-23">Tirsdag 23. november 2027</option><option value="2027-12-07">Tirsdag 7. december 2027</option><option value="2027-12-21">Tirsdag 21. december 2027</option><option value="2028-01-04">Tirsdag 4. januar 2028</option><option value="2028-01-18">Tirsdag 18. januar 2028</option><option value="2028-02-01">Tirsdag 1. februar 2028</option><option value="2028-02-15">Tirsdag 15. februar 2028</option><option value="2028-02-29">Tirsdag 29. februar 2028</option><option value="2028-03-14">Tirsdag 14. marts 2028</option><option value="2028-03-28">Tirsdag 28. marts 2028</option><option value="2028-04-11">Tirsdag 11. april 2028</option><option value="2028-04-25">Tirsdag 25. april 2028</option><option value="2028-05-09">Tirsdag 9. maj 2028</option><option value="2028-05-23">Tirsdag 23. maj 2028</option><option value="2028-06-06">Tirsdag 6. juni 2028</option><option value="2028-06-20">Tirsdag 20. juni 2028</option><option value="2028-07-04">Tirsdag 4. juli 2028</option><option value="2028-07-18">Tirsdag 18. juli 2028</option><option value="2028-08-01">Tirsdag 1. august 2028</option><option value="2028-08-15">Tirsdag 15. august 2028</option><option value="2028-08-29">Tirsdag 29. august 2028</option><option value="2028-09-12">Tirsdag 12. september 2028</option><option value="2028-09-26">Tirsdag 26. september 2028</option><option value="2028-10-10">Tirsdag 10. oktober 2028</option></select>
+<label for="url">Link til Facebook-begivenheden</label><input id="url" type="url" placeholder="https://www.facebook.com/events/…" autocomplete="off">
+<p class="help">Vælg datoen, og indsæt linket fra Facebook. Siden viser selv det matchende event.</p>
+<label class="check"><input id="cancel" type="checkbox">Denne aften holder vi pause</label>
+<div class="actions"><button type="submit">Tilføj / opdatér aften</button></div>
+</form>
+<h2>Dine aftener</h2><div id="entries"></div>
+<div class="actions"><button id="save" type="button">1. Gem datafil</button><button class="secondary" id="download" type="button">Download datafil</button><a class="button secondary" href="https://github.com/gigasus/gigasus.github.io/upload/main/bare-ord" target="_blank" rel="noopener noreferrer">2. Udgiv via GitHub ↗</a></div>
+<p id="dirty">Ingen ændringer.</p><p id="status" role="status" aria-live="polite"></p>
+<p class="help">Vælg <span class="filename">data.js</span> i samme mappe som siden, når du gemmer. Hvis din browser downloader filen, skal du erstatte den eksisterende <span class="filename">data.js</span> med den nye. Genindlæs derefter siden.</p>
+<p class="help">Sådan opdaterer du hjemmesiden: Gem eller download data.js. Vælg derefter »Udgiv via GitHub«, upload den nye data.js og vælg »Commit changes«. GitHub kræver dit login og adgang til hjemmesidens repository. Opdateringen kommer på hjemmesiden, når GitHub har udgivet ændringen.</p>
+</main>
+<script>
+globalThis.BARE_ORD_DATA = {
+  "events": {},
+  "cancelledDates": []
+};
+
+</script>
+<script src="data.js"></script><script>
+/* Every other Tuesday, counted from 27 October 2026. Dates follow Copenhagen time. */
+(function (root) {
+  'use strict';
+
+  const DAY = 86400000;
+  const ANCHOR = Date.UTC(2026, 9, 27);
+  // Add a date here if an evening is cancelled or there is a holiday break.
+  const excludedDates = new Set(root.BARE_ORD_DATA?.cancelledDates || []); // Example: '2026-12-22'
+  const copenhagen = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Copenhagen', year: 'numeric', month: '2-digit', day: '2-digit'
+  });
+  const displayDate = new Intl.DateTimeFormat('da-DK', {
+    timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long'
+  });
+
+  function iso(day) { return new Date(day).toISOString().slice(0, 10); }
+  function localDay(now) {
+    const parts = Object.fromEntries(copenhagen.formatToParts(now).map(p => [p.type, p.value]));
+    return Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day));
+  }
+  function upcoming(now = new Date(), count = 5) {
+    if (!Number.isInteger(count) || count < 1 || count > 100) throw new RangeError('Invalid event count');
+    const today = localDay(now);
+    let day = ANCHOR + Math.max(0, Math.ceil((today - ANCHOR) / (14 * DAY))) * 14 * DAY;
+    const dates = [];
+    while (dates.length < count) {
+      if (!excludedDates.has(iso(day))) {
+        const label = displayDate.format(new Date(day));
+        dates.push({ iso: iso(day), label: label.charAt(0).toUpperCase() + label.slice(1),
+          year: new Date(day).getUTCFullYear(), isToday: day === today });
+      }
+      day += 14 * DAY;
+    }
+    return dates;
+  }
+
+  // Expose the date calculation for verification without a browser.
+  const api = { upcoming, localDay, excludedDates };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  root.BareOrdSchedule = api;
+  if (typeof document === 'undefined' || !document.getElementById('event-date')) return;
+
+  let lastRenderedDay = '';
+  function render() {
+    const now = new Date();
+    const today = iso(localDay(now));
+    if (today === lastRenderedDay) return;
+    const dates = upcoming(now);
+    const next = dates[0];
+    const dateElement = document.getElementById('event-date');
+    dateElement.dateTime = next.iso;
+    dateElement.textContent = next.label;
+    document.getElementById('event-year').textContent = next.year;
+    const status = document.getElementById('date-status');
+    status.textContent = next.isToday ? 'Det er i dag' : 'Næste aften';
+    status.classList.toggle('is-today', next.isToday);
+    document.getElementById('next-label').textContent = next.isToday ? '01 / I dag på Bankeråt' : '01 / Næste aften';
+    document.getElementById('hero-date').textContent = next.isToday ? 'Vi ses i aften' : 'Find din næste aften';
+    const list = document.getElementById('upcoming-dates');
+    list.replaceChildren(...dates.slice(1).map(date => {
+      const li = document.createElement('li');
+      const time = document.createElement('time');
+      time.dateTime = date.iso;
+      time.textContent = `${date.label} ${date.year}`;
+      li.append(time);
+      return li;
+    }));
+    root.BareOrdSocial?.updateEvent(next.iso);
+    lastRenderedDay = today;
+  }
+  render();
+  // Update an open tab after midnight, and immediately when returning to it.
+  setInterval(render, 15000);
+  document.addEventListener('visibilitychange', render);
+  root.addEventListener('pageshow', render);
+})(globalThis);
+
+</script><script>
+(function () {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  let data = structuredClone(globalThis.BARE_ORD_DATA || { events: {}, cancelledDates: [] });
+  let fileHandle = null;
+  let dirty = false;
+  const formatter = new Intl.DateTimeFormat('da-DK', { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const format = date => formatter.format(new Date(date + 'T12:00:00Z'));
+  function validDate(date) {
+    return /^\d{4}-\d{2}-\d{2}$/.test(date) && !isNaN(Date.parse(date))
+      && new Date(date).toISOString().slice(0, 10) === date
+      && (Date.parse(date) - Date.UTC(2026, 9, 27)) % (14 * 86400000) === 0
+      && date >= '2026-10-27';
+  }
+  function validUrl(value) {
+    try {
+      const u = new URL(value);
+      return u.protocol === 'https:' && ['facebook.com', 'www.facebook.com', 'm.facebook.com'].includes(u.hostname)
+        && /^\/events\/(?:[^/]+\/)*\d+\/?$/.test(u.pathname);
+    } catch { return false; }
+  }
+  function markDirty(value) {
+    dirty = value;
+    $('dirty').textContent = value ? 'Du har ændringer, som ikke er gemt i datafilen.' : 'Ingen ugemte ændringer.';
+  }
+  function fillFields() {
+    $('url').value = data.events[$('date').value] || '';
+    $('cancel').checked = data.cancelledDates.includes($('date').value);
+    $('url').disabled = $('cancel').checked;
+  }
+  function render() {
+    const selected = $('date').value;
+    const options = new Set(BareOrdSchedule.upcoming(new Date(), 52).map(d => d.iso));
+    [...Object.keys(data.events), ...data.cancelledDates].forEach(d => options.add(d));
+    $('date').replaceChildren(...[...options].sort().map(date => {
+      const option = document.createElement('option'); option.value = date; option.textContent = format(date); return option;
+    }));
+    if (options.has(selected)) $('date').value = selected;
+    fillFields();
+    const entries = [...new Set([...Object.keys(data.events), ...data.cancelledDates])].sort();
+    $('entries').replaceChildren();
+    if (!entries.length) {
+      const p = document.createElement('p'); p.textContent = 'Ingen Facebook-events tilføjet endnu. Datoerne kører stadig automatisk.'; $('entries').append(p);
+    }
+    for (const date of entries) {
+      const row = document.createElement('div'); row.className = 'row';
+      const info = document.createElement('div');
+      const title = document.createElement('div'); title.className = 'date'; title.textContent = format(date); info.append(title);
+      if (data.cancelledDates.includes(date)) {
+        const note = document.createElement('span'); note.textContent = 'Pause — springes over'; info.append(note);
+      } else {
+        const link = document.createElement('a'); link.href = data.events[date]; link.textContent = 'Åbn Facebook-event ↗'; link.target = '_blank'; link.rel = 'noopener noreferrer'; info.append(link);
+      }
+      const actions = document.createElement('div'); actions.className = 'actions';
+      const edit = document.createElement('button'); edit.type = 'button'; edit.className = 'secondary'; edit.textContent = 'Rediger';
+      edit.addEventListener('click', () => { $('date').value = date; fillFields(); $('url').focus(); });
+      const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'secondary'; remove.textContent = 'Fjern'; remove.setAttribute('aria-label', 'Fjern registrering for ' + format(date));
+      remove.addEventListener('click', () => { delete data.events[date]; data.cancelledDates = data.cancelledDates.filter(d => d !== date); markDirty(true); render(); });
+      actions.append(edit, remove); row.append(info, actions); $('entries').append(row);
+    }
+  }
+  function validate(value) {
+    if (!value || typeof value.events !== 'object' || value.events === null || Array.isArray(value.events) || !Array.isArray(value.cancelledDates)) throw new Error('Filen er ikke en gyldig BARE ORD-datafil.');
+    for (const [date, url] of Object.entries(value.events)) if (!validDate(date) || !validUrl(url)) throw new Error('Datafilen indeholder en ugyldig dato eller et ugyldigt eventlink.');
+    if (!value.cancelledDates.every(validDate)) throw new Error('En pausedato passer ikke med hver anden tirsdag.');
+    return { events: { ...value.events }, cancelledDates: [...new Set(value.cancelledDates)] };
+  }
+  async function read(file) {
+    const text = await file.text();
+    const match = text.match(/^\s*globalThis\.BARE_ORD_DATA\s*=\s*([\s\S]*?)\s*;?\s*$/);
+    if (!match) throw new Error('Vælg filen data.js fra BARE ORD-mappen.');
+    data = validate(JSON.parse(match[1])); markDirty(false); render(); $('status').textContent = 'Datafilen er åbnet.';
+  }
+  $('open').addEventListener('click', async () => {
+    if (dirty && !confirm('Åbn en anden fil og kassér dine ugemte ændringer?')) return;
+    if (!window.showOpenFilePicker) { $('file').click(); return; }
+    try {
+      const [candidate] = await window.showOpenFilePicker({ multiple: false, types: [{ description: 'BARE ORD-datafil', accept: { 'text/javascript': ['.js'] } }] });
+      await read(await candidate.getFile()); fileHandle = candidate;
+    } catch (e) { if (e.name !== 'AbortError') $('status').textContent = e.message; }
+  });
+  $('file').addEventListener('change', async () => {
+    if (!$('file').files[0]) return;
+    try { await read($('file').files[0]); fileHandle = null; } catch (e) { $('status').textContent = e.message; }
+    $('file').value = '';
+  });
+  $('date').addEventListener('change', fillFields);
+  $('cancel').addEventListener('change', () => { $('url').disabled = $('cancel').checked; });
+  $('editor').addEventListener('submit', e => {
+    e.preventDefault(); const date = $('date').value; const url = $('url').value.trim();
+    if (!validDate(date)) { $('status').textContent = 'Vælg en gyldig arrangementsdato.'; return; }
+    if (!$('cancel').checked && !validUrl(url)) { $('status').textContent = 'Indsæt det fulde link fra Facebook-eventets side (facebook.com/events/…).'; return; }
+    data.cancelledDates = data.cancelledDates.filter(d => d !== date);
+    if ($('cancel').checked) { data.cancelledDates.push(date); delete data.events[date]; }
+    else data.events[date] = new URL(url).href;
+    markDirty(true); render(); $('status').textContent = 'Aftenen er opdateret. Gem ændringer for at bruge dem på siden.';
+  });
+  const serialize = () => 'globalThis.BARE_ORD_DATA = ' + JSON.stringify(validate(data), null, 2) + ';\n';
+  function download() {
+    const url = URL.createObjectURL(new Blob([serialize()], { type: 'text/javascript' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'data.js'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    $('status').textContent = 'Datafilen er downloadet. Erstat data.js i BARE ORD-mappen med den nye fil.';
+  }
+  $('download').addEventListener('click', download);
+  $('save').addEventListener('click', async () => {
+    try {
+      if (!fileHandle && !window.showSaveFilePicker) { download(); return; }
+      if (!fileHandle) fileHandle = await window.showSaveFilePicker({ suggestedName: 'data.js', types: [{ description: 'BARE ORD-datafil', accept: { 'text/javascript': ['.js'] } }] });
+      const writable = await fileHandle.createWritable(); await writable.write(serialize()); await writable.close();
+      markDirty(false); $('status').textContent = 'Datafilen er gemt. Vælg »Udgiv via GitHub«, hvis ændringen skal på hjemmesiden.';
+    } catch (e) { if (e.name !== 'AbortError') $('status').textContent = 'Kunne ikke gemme: ' + e.message + ' Brug eventuelt Download datafil.'; }
+  });
+  window.addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+  render();
+})();
+
+</script>
+</body></html>

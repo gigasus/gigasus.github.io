@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BARE ORD på Bankeråt — åben scene med Solstorm</title>
+  <meta name="description" content="BARE ORD er en åben scene på Bankeråt med Solstorm. Poesi, spoken word og dine egne ord. Hver anden tirsdag. Læs om tider, entré og tilmelding.">
+  <link rel="canonical" href="https://solstorm.org/bare-ord/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:title" content="BARE ORD på Bankeråt — åben scene med Solstorm">
+  <meta property="og:description" content="11 pladser. 3 minutter. Ingen mikrofon. Kom med dine ord — eller kom for at lytte.">
+  <meta property="og:url" content="https://solstorm.org/bare-ord/">
+  <meta name="theme-color" content="#ffc300">
+  <style>
+    :root{--yellow:#ffc300;--ink:#171713;--paper:#f5f1e7;--line:rgba(23,23,19,.3)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-underline-offset:5px}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid currentColor;outline-offset:6px}
+    .skip{position:absolute;left:20px;top:-80px;background:var(--ink);color:var(--yellow);padding:12px;z-index:10}.skip:focus{top:15px}
+    .wrap{width:min(1240px,calc(100% - 96px));margin:auto}
+    .poster{background:var(--yellow);overflow:hidden}
+    header{display:flex;justify-content:space-between;align-items:center;padding:26px 0;border-bottom:1px solid var(--ink);gap:20px}
+    .brand{font-size:22px;font-weight:900;letter-spacing:-1px;text-decoration:none}.brand span{font-size:13px;font-weight:400;letter-spacing:0;margin-left:10px}
+    nav{display:flex;gap:26px;font-size:13px}nav a{text-decoration:none}
+    .eyebrow{font-size:12px;line-height:1.5;text-transform:uppercase;letter-spacing:2px;font-weight:700}
+    .intro{display:flex;justify-content:space-between;gap:20px;margin-top:34px}
+    .intro p{margin:0}.intro p:last-child{text-align:right}
+    h1{font-family:Impact,'Arial Narrow',Arial,sans-serif;font-stretch:condensed;font-size:clamp(110px,22vw,290px);font-weight:900;line-height:.84;letter-spacing:-.035em;margin:44px 0 28px;text-transform:uppercase}
+    h1 span{display:block}h1 span:last-child{text-align:right}
+    .hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:end;padding-bottom:45px}
+    .hero-copy{font:clamp(24px,3vw,38px)/1.2 Georgia,serif;max-width:540px;margin:0}
+    .hero-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+    .button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;min-height:51px;padding:15px 21px;background:var(--ink);color:var(--yellow);font-size:14px;font-weight:700;text-decoration:none;border:1px solid var(--ink)}
+    .button:hover{background:var(--paper);color:var(--ink)}.button.light{background:transparent;color:var(--ink)}.button.light:hover{background:var(--ink);color:var(--yellow)}
+    .ticker{border-top:1px solid var(--ink);padding:16px 0;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .next{display:grid;grid-template-columns:1fr 2fr;gap:50px;padding:65px 0;border-bottom:1px solid var(--line)}
+    .section-label{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin:7px 0 0}
+    .next h2{font:clamp(36px,5vw,64px)/1.05 Georgia,serif;letter-spacing:-2px;margin:0 0 25px;font-weight:400}
+    .next h2 small{display:block;font:16px/1.5 Arial,sans-serif;letter-spacing:0;margin-top:12px}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin:30px 0 0}.facts div{border-top:1px solid var(--ink);padding-top:14px}.facts dt{font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px}.facts dd{margin:0;font-size:22px;font-weight:700}.facts dd span{display:block;font-size:13px;font-weight:400;line-height:1.5;margin-top:6px}
+    .story{padding:80px 0;display:grid;grid-template-columns:1fr 2fr;gap:50px}.story h2{font:clamp(32px,4vw,52px)/1.13 Georgia,serif;font-weight:400;letter-spacing:-1px;margin:0 0 28px;max-width:700px}.story p{font-size:17px;line-height:1.7;max-width:650px;margin:0 0 18px}
+    .rules{background:var(--ink);color:var(--paper);padding:65px 0}.rules .eyebrow{color:var(--yellow);margin:0 0 35px}.rule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:45px}.rule{border-top:1px solid #66665d;padding-top:22px}.rule .number{font-family:Impact,'Arial Narrow',Arial,sans-serif;font-size:100px;line-height:1;color:var(--yellow);letter-spacing:-4px}.rule h3{font-size:18px;margin:15px 0 10px}.rule p{font-size:15px;line-height:1.6;color:#cccac0;margin:0;max-width:310px}
+    .questions{padding:75px 0;display:grid;grid-template-columns:1fr 2fr;gap:50px}.questions h2{font:36px/1.15 Georgia,serif;font-weight:400;margin:0}details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px solid var(--line)}summary{padding:22px 0;cursor:pointer;font-size:17px;font-weight:700;display:flex;justify-content:space-between;gap:20px;list-style:none}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:24px;line-height:20px;font-weight:400}details[open] summary::after{content:'−'}details p{font-size:16px;line-height:1.65;max-width:600px;margin:0 0 23px}
+    .host{border-top:1px solid var(--line);padding:48px 0 58px;display:grid;grid-template-columns:1fr 2fr;gap:50px}.host h2{font:36px/1.15 Georgia,serif;font-weight:400;margin:0 0 18px}.host p{font-size:16px;line-height:1.7;max-width:620px;margin:0 0 20px}
+    footer{background:var(--yellow);padding:27px 0}footer .wrap{display:flex;justify-content:space-between;gap:25px;align-items:center}footer p{font-size:12px;margin:0}
+    .date-status{display:inline-block;background:var(--yellow);color:var(--ink);padding:8px 12px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 20px}
+    .date-status:empty{display:none}.date-status.is-today{background:var(--ink);color:var(--yellow)}
+    .upcoming{margin-top:30px;border-bottom:1px solid var(--line)}.upcoming summary{font-size:14px;padding:18px 0}.upcoming ol{list-style:none;padding:0;margin:0 0 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}.upcoming li{font-size:14px;line-height:1.6}.upcoming time{font-variant-numeric:tabular-nums}
+    nav a{display:inline-flex;align-items:center;min-height:44px}.section-label{line-height:1.6}
+    button{font:inherit;cursor:pointer}.button[hidden],[hidden]{display:none!important}.next-actions{margin-top:24px}.event-help{font-size:13px;line-height:1.6;margin:10px 0 0}
+    .follow-strip{display:flex;align-items:center;gap:14px 26px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--line);font-size:13px}.follow-strip strong{font-size:11px;letter-spacing:1.5px;text-transform:uppercase}.follow-strip a{display:inline-flex;align-items:center;min-height:44px}.host p{font-size:17px}.host h3{font:26px/1.25 Georgia,serif;font-weight:400;margin:36px 0 18px;padding-top:26px;border-top:1px solid var(--line)}
+    .community{border-top:1px solid var(--line);padding:48px 0 58px;display:grid;grid-template-columns:1fr 2fr;gap:50px}.community h2{font:36px/1.15 Georgia,serif;font-weight:400;margin:0 0 25px}.social-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}.social-link{display:flex;flex-direction:column;gap:8px;padding:22px;border:1px solid var(--line);text-decoration:none;transition:background .15s}.social-link:hover{background:var(--yellow)}.social-link strong{font-size:16px}.social-link span{font-size:13px;line-height:1.5}
+    .share{background:var(--yellow);padding:50px 0}.share-layout{display:flex;justify-content:space-between;align-items:center;gap:30px}.share h2{font:clamp(38px,5vw,64px)/1 Georgia,serif;font-weight:400;letter-spacing:-2px;margin:0 0 16px}.share p{font-size:15px;line-height:1.6;margin:0;max-width:520px}.share-options{margin-top:25px;padding-top:22px;border-top:1px solid var(--ink);display:flex;gap:12px;flex-wrap:wrap}.share-status{font-size:13px;min-height:1.5em;margin-top:12px!important}.copy-manual{width:100%;max-width:400px;background:var(--paper);border:1px solid var(--ink);padding:12px;font:14px Arial,sans-serif}.share button{border-radius:0}.share-trigger{flex-shrink:0}
+    @media(max-width:760px){.community{grid-template-columns:1fr;gap:25px;padding:42px 0}.community h2{font-size:32px}.social-link{padding:18px}.share-layout{align-items:flex-start;flex-direction:column}.share{padding:40px 0}.share h2{letter-spacing:-1px}.share-options .button{flex:1;justify-content:center;gap:15px}}
+    @media(max-width:390px){.social-links{grid-template-columns:1fr}}
+    @media(min-width:1450px){h1{font-size:290px}}
+    @media(max-width:760px){.wrap{width:calc(100% - 40px)}header{padding:22px 0}.brand span{display:none}nav{gap:15px;font-size:12px}.intro{margin-top:24px;font-size:10px;letter-spacing:1px}h1{font-size:clamp(100px,24vw,180px);margin:38px 0 30px;letter-spacing:-.045em}.hero-bottom{grid-template-columns:1fr;gap:24px;padding-bottom:30px}.hero-copy{font-size:27px;max-width:440px}.hero-actions{justify-content:flex-start}.ticker{font-size:10px;letter-spacing:1px}.next,.story,.questions,.host{grid-template-columns:1fr;gap:25px;padding:42px 0}.next h2{font-size:42px;letter-spacing:-1px}.facts{gap:15px}.facts dd{font-size:19px}.facts dd span{font-size:12px}.story h2{font-size:34px}.story p{font-size:16px}.rules{padding:42px 0}.rule-grid{gap:25px}.rule .number{font-size:73px;letter-spacing:-3px}.rule h3{font-size:15px}.rule p{font-size:13px}.questions h2,.host h2{font-size:32px}footer .wrap{align-items:flex-start}footer p{max-width:160px;line-height:1.6}}
+    @media(max-width:390px){.wrap{width:calc(100% - 32px)}nav{gap:12px}.rule-grid{grid-template-columns:1fr}.rule{display:grid;grid-template-columns:86px 1fr;gap:0 15px}.rule .number{grid-row:span 2}.rule h3{margin-top:0}.rule p{max-width:none}.facts{gap:10px}.facts dd{font-size:17px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#indhold">Spring til indhold</a>
+  <main id="indhold">
+  <div class="poster">
+    <div class="wrap">
+      <header>
+        <a class="brand" href="https://solstorm.org/" aria-label="Solstorm — forside">SOLSTORM<span>præsenterer</span></a>
+        <nav aria-label="På denne side"><a href="#naeste">Næste aften</a><a href="#praktisk">Praktisk</a><a href="#om">Om</a></nav>
+      </header>
+      <div>
+        <div class="intro eyebrow"><p>Åben scene på Bankeråt<br>Med Solstorm</p><p>København<br>Hver anden tirsdag</p></div>
+        <h1><span>BARE</span><span>ORD.</span></h1>
+        <div class="hero-bottom">
+          <p class="hero-copy">Et rum for ordene.<br>Og dem, der vil lytte.</p>
+          <div class="hero-actions"><a class="button" href="#naeste"><span id="hero-date">Find din næste aften</span> <span aria-hidden="true">↘</span></a><a class="button light" href="#praktisk">Vil du læse op? <span aria-hidden="true">↘</span></a></div>
+        </div>
+        <div class="ticker"><span>Poesi & spoken word</span><span>11 pladser · 3 minutter</span><span>Ingen mikrofoner. Bare ord.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="follow-strip wrap" role="group" aria-label="Følg BARE ORD og Solstorm">
+    <strong>Følg med</strong>
+    <a href="https://www.facebook.com/groups/poesipaapsykopaten/" target="_blank" rel="noopener noreferrer">Facebook-gruppen ↗</a>
+    <a href="https://www.instagram.com/bareord.dk/" target="_blank" rel="noopener noreferrer">Instagram · @bareord.dk ↗</a>
+    <a href="https://www.facebook.com/jmsolstorm/" target="_blank" rel="noopener noreferrer">J.M. Solstorm på Facebook ↗</a>
+  </div>
+  <section class="next wrap" id="naeste" aria-labelledby="next-title">
+    <p class="section-label" id="next-label">01 / Næste aften</p>
+    <div>
+      <p class="date-status" id="date-status" aria-live="polite">Næste aften</p>
+      <h2 id="next-title"><time id="event-date" datetime="2026-10-27">Tirsdag 27. oktober</time><small><span id="event-year">2026</span> · Bankeråt, København</small></h2>
+      <dl class="facts"><div><dt>Tilmelding og hygge</dt><dd>18–19<span>På stedet · først til mølle</span></dd></div><div><dt>På scenen</dt><dd>19–21<span>Oplæsning og nærvær</span></dd></div><div><dt>Entré</dt><dd>50 kr.<span>Kom for at læse eller lytte</span></dd></div></dl>
+      <div class="next-actions" id="event-actions" hidden><a class="button" id="facebook-event" target="_blank" rel="noopener noreferrer">Se eventet på Facebook <span aria-hidden="true">↗</span></a><p class="event-help">Markér din interesse eller deltagelse på Facebook. Tilmelding til oplæsning foregår på stedet kl. 18–19.</p></div>
+      <details class="upcoming"><summary>Se flere datoer</summary><ol id="upcoming-dates"></ol></details>
+      <noscript><p>BARE ORD er hver anden tirsdag. Slå JavaScript til for automatisk at se den næste dato.</p></noscript>
+    </div>
+  </section>
+  <section class="story wrap" id="om" aria-labelledby="about-title">
+    <p class="section-label">02 / Scenen er åben</p>
+    <div><h2 id="about-title">Du behøver ikke have<br>stået på en scene før.</h2><p>BARE ORD er en åben scene på Bankeråt med digteren og spoken word-kunstneren Solstorm som vært. Her er plads til poesi, spoken word og dine egne tekster — både de gennemarbejdede og dem, du skal prøve af for første gang.</p><p>Kom med noget, du har skrevet. Eller kom, sæt dig til rette og lyt. Publikum er lige så meget en del af aftenen som dem, der læser op.</p></div>
+  </section>
+  <section class="rules" id="praktisk" aria-labelledby="rules-title"><div class="wrap">
+    <h2 class="eyebrow" id="rules-title">03 / Sådan er du med</h2>
+    <div class="rule-grid">
+      <article class="rule"><div class="number" aria-hidden="true">11</div><h3>11 åbne pladser</h3><p>Tilmeld dig hos værten kl. 18–19. Pladserne fordeles efter først til mølle. Ingen forhåndstilmelding.</p></article>
+      <article class="rule"><div class="number" aria-hidden="true">3</div><h3>3 minutter til dine ord</h3><p>Tag din tekst med, og giv den liv foran et lyttende publikum. Solstorm introducerer de optrædende.</p></article>
+      <article class="rule"><div class="number" aria-hidden="true">0</div><h3>Ingen mikrofoner</h3><p>Din stemme og dine ord i rummet. Vi giver plads og lytter til hinanden.</p></article>
+    </div>
+  </div></section>
+  <section class="questions wrap" aria-labelledby="faq-title"><div><p class="section-label">04 / Godt at vide</p><h2 id="faq-title" style="margin-top:18px">Inden du kommer.</h2></div><div>
+    <details><summary>Skal jeg tilmelde mig på forhånd?</summary><p>Nej. Tilmelding til oplæsning foregår på Bankeråt kl. 18–19 samme aften. Der er 11 pladser, og det er først til mølle.</p></details>
+    <details><summary>Må jeg komme bare for at lytte?</summary><p>Ja. Du er velkommen som publikum, også hvis du ikke selv vil læse op. Oplæsningerne foregår kl. 19–21.</p></details>
+    <details><summary>Skal jeg have erfaring med oplæsning?</summary><p>Nej. Både nye og erfarne stemmer er velkomne. Du har op til tre minutter til din tekst.</p></details>
+    <details><summary>Hvor og hvor ofte foregår det?</summary><p>BARE ORD foregår på Bankeråt i København hver anden tirsdag. Næste aften og flere kommende datoer står øverst på siden.</p></details>
+  </div></section>
+  <section class="host wrap" aria-labelledby="host-title"><p class="section-label">05 / Din vært</p><div><h2 id="host-title">Solstorm.</h2><p>Solstorm er digter, musiker og spoken word-kunstner. Bag navnet står Jeffrey McCammon Solstorm, der også har udgivet under navnet J.M. Solstorm. Hans arbejde bevæger sig mellem det skrevne ord, musikken og den levende fremførelse.</p>
+    <p>I 2022 debuterede han på Muusmann Forlag med digtsamlingen <em>Ud over afgrunden med åbne øjne</em>. Her mødes samfundskritik og personlige erfaringer i digte om blandt andet kærlighed, teknologi og menneskets plads i en verden under forandring. Med rødder i hiphop tager han rytmen og sprogets mundtlige kraft med ind i poesien.</p>
+    <p>På BARE ORD er han din vært. Han introducerer de optrædende, binder aftenen sammen og giver nye stemmer en tryg vej ind på scenen.</p>
+    <h3>Fra Poesi på Psykopaten til BARE ORD</h3><p>I over seks år har Solstorm skabt rum for poesien med <strong>Poesi på Psykopaten</strong> på Frederiksberg. Nu tager han erfaringerne og fællesskabet med ind i <strong>BARE ORD på Bankeråt</strong>.</p>
+    <p>Konceptet har han udviklet med inspiration fra antikkens græske fortælle- og talekunst: et menneske, der træder frem og giver sine ord til andre. Ingen mikrofon. Ingen højttalere. Stemmen bærer, og rummet lytter.</p>
+    <p>Det er fortællingen i sin enkleste form. Sådan har mennesker delt viden, givet følelser form og udfordret hinandens forestillinger længe før den første scene fik strøm. Den tradition lever videre i BARE ORD — med plads til både erfarne stemmer og dem, der deler deres ord for allerførste gang.</p><a href="https://solstorm.org/">Gå på opdagelse hos Solstorm <span aria-hidden="true">↗</span></a><p style="margin-top:18px"><a href="https://www.facebook.com/jmsolstorm/" target="_blank" rel="noopener noreferrer">Følg J.M. Solstorm på Facebook ↗</a></p></div></section>
+  <section class="community wrap" aria-labelledby="community-title"><p class="section-label">06 / Mellem aftenerne</p><div><h2 id="community-title">Ordene lever videre.</h2><div class="social-links">
+    <a class="social-link" href="https://www.facebook.com/groups/poesipaapsykopaten/" target="_blank" rel="noopener noreferrer"><strong>Facebook-gruppen ↗</strong><span>Vær med i fællesskabet omkring BARE ORD.</span></a>
+    <a class="social-link" href="https://www.instagram.com/bareord.dk/" target="_blank" rel="noopener noreferrer"><strong>BARE ORD på Instagram ↗</strong><span>Følg @bareord.dk.</span></a>
+  </div></div></section>
+  <section class="share" aria-labelledby="share-title"><div class="wrap">
+    <div class="share-layout"><div><h2 id="share-title">Ord skal deles.</h2><p>Kender du én, der skal med? Send BARE ORD videre.<br>En plads i publikum kan være begyndelsen på noget.</p></div><button class="button share-trigger" id="share-page" type="button" aria-controls="share-options" aria-expanded="false">Del siden <span aria-hidden="true">↗</span></button></div>
+    <div class="share-options" id="share-options" hidden>
+      <a class="button light" id="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolstorm.org%2Fbare-ord%2F" target="_blank" rel="noopener noreferrer">Del på Facebook <span aria-hidden="true">↗</span></a>
+      <button class="button light" id="copy-link" type="button">Kopiér link <span aria-hidden="true">↗</span></button>
+      <label id="copy-manual-label" hidden>Kopiér adressen herfra: <input class="copy-manual" id="copy-manual" type="text" readonly value="https://solstorm.org/bare-ord/" aria-label="Link til BARE ORD"></label>
+    </div>
+    <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+  </div></section>
+  </main>
+  <footer><div class="wrap"><a class="brand" href="https://solstorm.org/">SOLSTORM</a><p>BARE ORD på Bankeråt<br>Åben scene. Hver anden tirsdag.</p></div></footer>
+  <script>
+globalThis.BARE_ORD_DATA = {
+  "events": {},
+  "cancelledDates": []
+};
+
+</script>
+<script src="data.js"></script>
+  <script>
+(function (root) {
+  'use strict';
+  const pageUrl = 'https://solstorm.org/bare-ord/';
+  const events = root.BARE_ORD_DATA?.events || {};
+  function eventUrl(date) {
+    const value = events[date];
+    if (!value) return null;
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && ['facebook.com', 'www.facebook.com', 'm.facebook.com'].includes(url.hostname)
+        && url.pathname.startsWith('/events/') ? url.href : null;
+    } catch { return null; }
+  }
+  function updateEvent(date) {
+    const url = eventUrl(date);
+    const link = document.getElementById('facebook-event');
+    document.getElementById('event-actions').hidden = !url;
+    if (url) link.href = url;
+    else link.removeAttribute('href');
+  }
+  root.BareOrdSocial = { events, eventUrl, updateEvent };
+  if (typeof document === 'undefined') return;
+
+  const trigger = document.getElementById('share-page');
+  const options = document.getElementById('share-options');
+  const status = document.getElementById('share-status');
+  function showOptions() {
+    options.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+    document.getElementById('share-facebook').focus();
+  }
+  trigger.addEventListener('click', async () => {
+    status.textContent = '';
+    if (typeof navigator.share === 'function') {
+      try {
+        await navigator.share({ title: 'BARE ORD på Bankeråt — med Solstorm',
+          text: 'Kom med til BARE ORD: åben scene for poesi og spoken word på Bankeråt. Læs mere her.', url: pageUrl });
+        return;
+      } catch (error) {
+        if (error.name === 'AbortError') return;
+      }
+    }
+    showOptions();
+  });
+  document.getElementById('copy-link').addEventListener('click', async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(pageUrl);
+      status.textContent = 'Link kopieret — send det til én, der skal med.';
+    } catch {
+      // The local file preview or browser settings can block clipboard access.
+      const label = document.getElementById('copy-manual-label');
+      const field = document.getElementById('copy-manual');
+      label.hidden = false;
+      field.focus();
+      field.select();
+      status.textContent = 'Markér og kopiér linket i feltet.';
+    }
+  });
+})(globalThis);
+
+</script>
+  <script>
+/* Every other Tuesday, counted from 27 October 2026. Dates follow Copenhagen time. */
+(function (root) {
+  'use strict';
+
+  const DAY = 86400000;
+  const ANCHOR = Date.UTC(2026, 9, 27);
+  // Add a date here if an evening is cancelled or there is a holiday break.
+  const excludedDates = new Set(root.BARE_ORD_DATA?.cancelledDates || []); // Example: '2026-12-22'
+  const copenhagen = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Copenhagen', year: 'numeric', month: '2-digit', day: '2-digit'
+  });
+  const displayDate = new Intl.DateTimeFormat('da-DK', {
+    timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long'
+  });
+
+  function iso(day) { return new Date(day).toISOString().slice(0, 10); }
+  function localDay(now) {
+    const parts = Object.fromEntries(copenhagen.formatToParts(now).map(p => [p.type, p.value]));
+    return Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day));
+  }
+  function upcoming(now = new Date(), count = 5) {
+    if (!Number.isInteger(count) || count < 1 || count > 100) throw new RangeError('Invalid event count');
+    const today = localDay(now);
+    let day = ANCHOR + Math.max(0, Math.ceil((today - ANCHOR) / (14 * DAY))) * 14 * DAY;
+    const dates = [];
+    while (dates.length < count) {
+      if (!excludedDates.has(iso(day))) {
+        const label = displayDate.format(new Date(day));
+        dates.push({ iso: iso(day), label: label.charAt(0).toUpperCase() + label.slice(1),
+          year: new Date(day).getUTCFullYear(), isToday: day === today });
+      }
+      day += 14 * DAY;
+    }
+    return dates;
+  }
+
+  // Expose the date calculation for verification without a browser.
+  const api = { upcoming, localDay, excludedDates };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  root.BareOrdSchedule = api;
+  if (typeof document === 'undefined' || !document.getElementById('event-date')) return;
+
+  let lastRenderedDay = '';
+  function render() {
+    const now = new Date();
+    const today = iso(localDay(now));
+    if (today === lastRenderedDay) return;
+    const dates = upcoming(now);
+    const next = dates[0];
+    const dateElement = document.getElementById('event-date');
+    dateElement.dateTime = next.iso;
+    dateElement.textContent = next.label;
+    document.getElementById('event-year').textContent = next.year;
+    const status = document.getElementById('date-status');
+    status.textContent = next.isToday ? 'Det er i dag' : 'Næste aften';
+    status.classList.toggle('is-today', next.isToday);
+    document.getElementById('next-label').textContent = next.isToday ? '01 / I dag på Bankeråt' : '01 / Næste aften';
+    document.getElementById('hero-date').textContent = next.isToday ? 'Vi ses i aften' : 'Find din næste aften';
+    const list = document.getElementById('upcoming-dates');
+    list.replaceChildren(...dates.slice(1).map(date => {
+      const li = document.createElement('li');
+      const time = document.createElement('time');
+      time.dateTime = date.iso;
+      time.textContent = `${date.label} ${date.year}`;
+      li.append(time);
+      return li;
+    }));
+    root.BareOrdSocial?.updateEvent(next.iso);
+    lastRenderedDay = today;
+  }
+  render();
+  // Update an open tab after midnight, and immediately when returning to it.
+  setInterval(render, 15000);
+  document.addEventListener('visibilitychange', render);
+  root.addEventListener('pageshow', render);
+})(globalThis);
+
+</script>
+</body>
+</html>
