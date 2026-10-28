@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build static poem pages from editor files, without third-party dependencies."""
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -94,8 +95,10 @@ def first_line(body):
 
 def shell(title, description, url, content, hero='DIGTE.', intro='Et udvalg af Solstorms digte.'):
     heading = f'<h1>{hero}</h1>' if hero else '<h1 class="sr-only">Digt af Solstorm</h1>'
+    css_version = hashlib.sha256((ROOT / 'digte/digte.css').read_bytes()).hexdigest()[:12]
+    share_version = hashlib.sha256((ROOT / 'digte/del.js').read_bytes()).hexdigest()[:12]
     metadata = json.dumps({'@context': 'https://schema.org', '@type': 'CollectionPage' if url.endswith('/digte/') else 'WebPage', 'name': title, 'url': url, 'inLanguage': 'da', 'about': {'@type': 'Person', '@id': BASE + '/#solstorm', 'name': 'Solstorm'}}, ensure_ascii=False).replace('<', '\\u003c')
-    return f'''<!doctype html><html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{esc(url)}"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{esc(url)}"><meta property="og:image" content="{BASE}/biografi/assets/selvportraet.jpg"><link rel="stylesheet" href="/digte/digte.css"><script type="application/ld+json">{metadata}</script></head><body><div class="top"><div class="wrap"><header><a class="brand" href="/">SOLSTORM</a><nav aria-label="Hovedmenu"><a href="/bare-ord/">Bare Ord</a><a href="/biografi/">Biografi</a><a href="/digte/" aria-current="page">Digte</a><a href="mailto:gigasus@gmail.com">Kontakt</a></nav></header><p class="eyebrow">Solstorm / Poesi</p>{heading}<p class="intro">{intro}</p></div></div><main class="wrap">{content}</main><footer><div class="wrap">Solstorm / Poesi · <a href="/biografi/">Om digteren ↗</a></div></footer><script src="/digte/del.js" defer></script></body></html>'''
+    return f'''<!doctype html><html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{esc(url)}"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{esc(url)}"><meta property="og:image" content="{BASE}/biografi/assets/selvportraet.jpg"><link rel="stylesheet" href="/digte/digte.css?v={css_version}"><script type="application/ld+json">{metadata}</script></head><body><div class="top"><div class="wrap"><header><a class="brand" href="/">SOLSTORM</a><nav aria-label="Hovedmenu"><a href="/bare-ord/">Bare Ord</a><a href="/biografi/">Biografi</a><a href="/digte/" aria-current="page">Digte</a><a href="mailto:gigasus@gmail.com">Kontakt</a></nav></header><p class="eyebrow">Solstorm / Poesi</p>{heading}<p class="intro">{intro}</p></div></div><main class="wrap">{content}</main><footer><div class="wrap">Solstorm / Poesi · <a href="/biografi/">Om digteren ↗</a></div></footer><script src="/digte/del.js?v={share_version}" defer></script></body></html>'''
 
 def share_button(d, address):
     label = d['title'] or first_line(d['body'])
