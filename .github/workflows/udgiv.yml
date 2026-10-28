@@ -1,0 +1,41 @@
+name: Byg og udgiv Solstorm
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    permissions:
+      contents: read
+      pages: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Klargør GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Kontrollér digtfiler og formatering
+        run: python3 scripts/test_build_digte.py
+      - name: Byg digte og hjemmeside
+        run: python3 scripts/build_digte.py --output _site
+      - name: Pak hjemmeside
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Udgiv hjemmeside
+        id: deployment
+        uses: actions/deploy-pages@v4
