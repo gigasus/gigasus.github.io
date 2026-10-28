@@ -17,7 +17,7 @@ class PublishingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp) / 'source'
             (root / 'digte/tekster').mkdir(parents=True)
-            for name in ['digte.css', 'rediger.html', 'editor.js']:
+            for name in ['digte.css', 'rediger.html', 'editor.js', 'del.js']:
                 (root / 'digte' / name).write_text('')
             (root / 'index.html').write_text('<a href="dr.dk" class="link-108">digte</a>')
             visible = dict(version=1, title='Ord <og> tegn', slug='ord', body='Første<br><br><blockquote><i>    Sidste</i></blockquote>', published=True, homepage=True, order=10)
@@ -32,6 +32,9 @@ class PublishingTests(unittest.TestCase):
                 page = (output / 'digte/ord/index.html').read_text()
                 self.assertIn('Ord &lt;og&gt; tegn', page)
                 self.assertIn(visible['body'], page)
+                self.assertIn('Del dette digt', page)
+                self.assertIn('https://solstorm.org/digte/ord/', page)
+                self.assertNotIn('Link til dette digt', page)
                 self.assertFalse((output / 'digte/skjult').exists())
                 self.assertFalse((output / 'digte/tekster').exists())
                 self.assertIn('/digte/ord/', (output / 'sitemap.xml').read_text())
